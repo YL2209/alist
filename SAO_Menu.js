@@ -288,18 +288,16 @@ function openDarkMode() { // Switch Between Light And Dark Mode
 function openhideAsideBtn() { // Hide aside
   const $htmlDom = document.documentElement.classList;
   $htmlDom.contains('hide-aside')
-    ? saveToLocal.set('aside-status', 'show', 2) || SnackbarIMGES('你已切换为双栏', 2000)
-    : saveToLocal.set('aside-status', 'hide', 2) || SnackbarIMGES('你已切换为单栏', 2000);
+    ? saveToLocal.set('aside-status', 'show', 2)
+    : saveToLocal.set('aside-status', 'hide', 2);
   $htmlDom.toggle('hide-aside');
 }
+
 //看板娘开关切换
 function openlive2d() {
   var w = document.getElementById("waifu-toggle");
   var wa = document.getElementById("waifu").style;
   if (w.classList == "waifu-toggle-active") {
-    SnackbarIMGES('你好，我是小・游的小助手！', 10000);
-    // showMessagePIUS("你好，我是小・游的小助手！", 10000, 15);
-    // showMessage("你好，我是小・游的小助手！", 2000, 11);
     w.classList.remove("waifu-toggle-active");
     // wa.bottom = "0px";
     if (w.getAttribute("first-time")) {
@@ -313,9 +311,6 @@ function openlive2d() {
       }, 0);
     }
   } else {
-    localStorage.setItem("waifu-display", Date.now());
-    SnackbarIMGES('愿有一天能与你再次重逢！', 10000);
-    // showMessage("愿你有一天能与重要的人重逢。", 2000, 11);
     wa.bottom = "-500px";
     setTimeout(() => {
       wa.display = "none";
@@ -323,26 +318,17 @@ function openlive2d() {
     }, 3000);
   }
 }
-//阅读模式开关切换
-// function openreadmode(){
-//   var r = document.body.classList;
-//   if (r=="read-mode") {
-//     r.remove('read-mode');
-//   } else {
-//     r.add('read-mode');
-//   }
-// }
+
+
 function openReadMode() { // read-mode
   const $body = document.body;
   const newEle = document.createElement('button');
   // var r = document.body.classList;
   if ($body.classList == "read-mode") {
-    SnackbarIMGES('你已关闭阅读模式', 2000);
     $body.classList.remove('read-mode');
     newEle.remove();
     newEle.removeEventListener('click', clickFn);
   } else {
-    SnackbarIMGES('你已打开阅读模式', 2000);
     $body.classList.add('read-mode');
     newEle.type = 'button';
     newEle.className = 'fas fa-sign-out-alt exit-readmode';
@@ -350,10 +336,7 @@ function openReadMode() { // read-mode
     newEle.addEventListener('click', clickFn)
   }
 }
-//在线聊天按钮动作
-// function openTidio() {
-// window.tidioChatApi.show();window.tidioChatApi.open();
-// }
+
 //镜像站跳转动作
 // function Mirror() {
 //   let pathname;
@@ -376,15 +359,15 @@ function openReadMode() { // read-mode
 //   }
 // }
 //评论窗口跳转
-function ToComment() {
-  var hasComment = document.getElementById('post-comment');
-  if (hasComment) {
-    window.location.href = '#post-comment'; //如果有评论区就跳转到评论区
-  }
-  else {
-    linkStart('/comments/');//如果没有，就跳转到留言板
-  };
-}
+// function ToComment() {
+//   var hasComment = document.getElementById('post-comment');
+//   if (hasComment) {
+//     window.location.href = '#post-comment'; //如果有评论区就跳转到评论区
+//   }
+//   else {
+//     linkStart('/comments/');//如果没有，就跳转到留言板
+//   };
+// }
 // 回到顶部
 function openToTop() { // Back to top
   btf.scrollToDest(0, 500);
