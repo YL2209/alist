@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        element.style {
+            overflow: auto;
+        }
+
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+
+        body {
+            position: relative;
+            min-height: 100%;
+            background: var(--global-bg);
+            color: var(--font-color);
+            font-size: var(--global-font-size);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Lato, Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 2;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        #web_bg {
+            position: fixed;
+            z-index: -999;
+            width: 100%;
+            height: 100%;
+            background-image: url(wallhaven-47ol30_3840x2400.png);
+            background-attachment: local;
+            background-position: center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #web_bg:before {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .7);
+            content: '';
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/YL2209/alist/SAO_MENU.css">
+    <!-- <link rel="stylesheet" href="all.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="all"
+        onload="this.media=&quot;all&quot;">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.3.0/font-awesome-animation.min.css"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="web_bg"></div>
+    <div id="SAO-back" style="display: none;">
+        <div id="SAO-menu" style="display: block; left: 520px; top: 167px; cursor: default;">
+            <div id="SAO-menu-content">
+                <div class="utils-list">
+                    <div class="utils-list-item">
+                        <div class="user-panel" style="top:-170">
+                            <div class="user-panel-name">Help</div>
+                            <div class="user-panel-img"><img
+                                    src="https://npm.elemecdn.com/akilar-candyassets/image/info.png"></div>
+                            <div class="user-panel-properties">Anything can I help you ?</div>
+                        </div><i class="fa fa-question-circle" onclick="panelAudio(),UtilsClick()"></i>
+                        <div class="menu-list" style="top:-83px">
+                            <div class="menu-list-item"><i class="fas fa-info-circle"
+                                    onclick="clickAudio(),setTimeout((function(){SAOclose(),linkStart(&quot;https://akilar.top/posts/fd243d7/&quot;)}),500)">帮助</i>
+                            </div>
+                            <div class="menu-list-item"><i class="fa fa-folder-open"
+                                    onclick="panelAudio(),MenusClick()">文件</i>
+                                <div class="menu-child" style="top:-60px">
+                                    <div class="menu-list-child"><i class="fa fa-file-invoice"
+                                            onclick="clickAudio(),setTimeout((function(){SAOclose(),linkStart(&quot;https://butterfly.js.org/&quot;)}),500)">Beautify</i>
+                                    </div>
+                                    <div class="menu-list-child"><i class="fas fa-archway"
+                                            onclick="clickAudio(),setTimeout((function(){SAOclose(),linkStart(&quot;https://hexo.io/plugins/&quot;)}),500)">Hexo</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="utils-list-item">
+                        <div class="user-panel">
+                            <div class="user-panel-name">说明书</div>
+                            <div class="user-panel-img"><img
+                                    src="https://webstatic.mihoyo.com/upload/op-public/2022/09/14/8d1e339c07abb7ab48e57182e89a1101_7402213442670582066.png">
+                            </div>
+                            <div class="user-panel-properties">
+                                <h4>欢迎使用SAO_Utils_Web 2.0</h4>
+                                <p>点按选项可以持续显示下级菜单。您可以通过按住<kbd>ctrl</kbd>+<kbd>右键</kbd>来恢复使用原生右键菜单，更多内容可点击下方链接访问源教程。</p>
+                                <center><a target="_blank" rel="noopener"
+                                        href="https://akilar.top/posts/fd243d7/">©Akilarの糖果屋</a></center>
+                            </div>
+                        </div><i class="fa fa-cog fa-spin" onclick="panelAudio(),UtilsClick()"></i>
+                        <div class="menu-list" style="top:-163px">
+                            <div class="menu-list-item"><i class="fas fa-adjust" onclick="clickAudio(),openDarkMode()"
+                                    title="浅色和深色模式转换">模式切换</i></div>
+                            <div class="menu-list-item"><i class="fas fa-images" onclick="panelAudio(),MenusClick()"
+                                    title="背景图片切换">背景切换</i>
+                                <div class="menu-child" style="top:-75px">
+                                    <div class="menu-list-child"><i class="fas fa-images"
+                                            onclick="imgeAudio(),openImage()" title="动漫背景图片切换">动漫背景</i></div>
+                                    <div class="menu-list-child"><i class="fas fa-clone"
+                                            onclick="imgeAudio(),openImageGif()" title="动态背景图片切换">动态背景</i></div>
+                                    <div class="menu-list-child"><i class="fas fa-images"
+                                            onclick="imgeAudio(),openImageApi()" title="简约背景图片切换">简约背景</i></div>
+                                </div>
+                            </div>
+                            <div class="menu-list-item"><i class="fas fa-heartbeat" onclick="clickAudio(),openlive2d()"
+                                    title="看板娘隐显转换">看板娘开关</i></div>
+                            <div class="menu-list-item"><i class="fas fa-book-open" onclick="panelAudio(),MenusClick()"
+                                    title="文章相关设置">文章设置</i>
+                                <div class="menu-child" style="top:-75px">
+                                    <div class="menu-list-child"><i class="fas fa-arrows-alt-h"
+                                            onclick="clickAudio(),openhideAsideBtn()" title="单栏和双栏切换">排版切换</i></div>
+                                    <div class="menu-list-child"><i class="fas fa-book-open"
+                                            onclick="clickAudio(),openReadMode()" title="阅读模式转换">阅读模式</i></div>
+                                    <div class="menu-list-child"><i class="fas fa-comments"
+                                            onclick="clickAudio(),ToComment()" title="直达评论">评论</i></div>
+                                </div>
+                            </div>
+                            <div class="menu-list-item"><i class="fas fa-arrow-up" onclick="clickAudio(),openToTop()"
+                                    title="直达顶部">返回顶部</i></div>
+                            <div class="menu-list-item"><i class="fa fa-sign-out-alt"
+                                    onclick="alertAudio(),openLogout()" title="退出浏览窗口">退出</i></div>
+                        </div>
+                    </div>
+                    <div class="utils-list-item"><i class="fa fa-power-off"
+                            onclick="alertAudio(),SAOKeepOff(),SAOtoggleOn()"
+                            title="关闭SAO右键菜单"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="SAO-logout">
+        <div class="logout-title">Alert</div>
+        <div class="logout-alert">是否确认退出?</div>
+        <div class="logout-button"><span class="logout-confirm"><button class="far fa-circle" type="button"
+                    name="confirm" onclick="LogoffAudio(),confirmLogout()"></button></span><span
+                class="logout-cancel"><button class="fa fa-times" type="button" name="cancel"
+                    onclick="LogonAudio(),cancelLogout()"></button></span></div>
+    </div>
+    <audio id="SAOlauncher" src="https://npm.elemecdn.com/akilar-candyassets/audio/Launcher.mp3"></audio>
+    <audio id="SAOClick"
+        src="https://npm.elemecdn.com/akilar-candyassets/audio/Click.mp3"></audio>
+    <audio id="SAOPanel" src="https://npm.elemecdn.com/akilar-candyassets/audio/Panel.mp3"></audio>
+    <audio id="SAOAlert" src="https://npm.elemecdn.com/akilar-candyassets/audio/Alert.mp3"></audio>
+    <audio id="SAOImge" src="https://cdn.jsdelivr.net/gh/XXKDB/img_cdn/cursor/img.mp3"></audio>
+    <audio id="SAOLogoff" src="https://cdn.jsdelivr.net/gh/XXKDB/img_cdn/cursor/Logoff.mp3"></audio>
+    <audio id="SAOLogon" src="https://cdn.jsdelivr.net/gh/XXKDB/img_cdn/cursor/Logon.mp3"></audio>
+    <button id="SAO-toggle" type="button" title="看板娘" onclick="panelAudio(),SAOSwitch(),SAOtoggleOn()">
+        <i class="fa fa-cog fa-spin"></i></button>
+    <!-- <script src="SAO_Menu.js"></script>
+    <script src="Imagebg.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/YL2209/alist/SAO_Menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/YL2209/alist/Imagebg.js"></script>
+</body>
+
+</html>
