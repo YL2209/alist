@@ -49,7 +49,8 @@ var openImag3 = 0;
 var openIMAgesQU = 0;
 var iMAgesQU = 1;
 function openImageGif() {
-  document.body.style.backgroundImage = "url(" + fruItsIMGes[openImag3] + ")";
+  // document.body.style.backgroundImage = "url(" + fruItsIMGes[openImag3] + ")";
+  document.body.setAttribute('style', "background-Image: url(" + fruItsIMGes[openImag3]  +")!important;");
   openIMAgesQU = fruItsIMGes.length;
   if (openImag3 >= openIMAgesQU - 1) {
     openImag3 = 0;
@@ -59,6 +60,7 @@ function openImageGif() {
     iMAgesQU++;
   }
 }
+
 
 
 //简约背景切换
@@ -87,7 +89,8 @@ var openImag31 = 0;
 var openIMAgesQU2 = 0;
 var iMAgesQU2 = 1;
 function openImageApi() {
-  document.body.style.backgroundImage = "url(" + fruItsIMGes2[openImag31] + ")";
+  // document.body.style.backgroundImage = "url(" + fruItsIMGes2[openImag31] + ")";
+  document.body.setAttribute('style', "background-Image: url(" + fruItsIMGes2[openImag31]  +")!important;");
   openIMAgesQU2 = fruItsIMGes2.length;
   if (openImag31 >= openIMAgesQU2 - 1) {
     openImag31 = 0;
@@ -128,7 +131,8 @@ var openImag33 = 0;
 var openIMAgesQU3 = 0;
 var iMAgesQU3 = 1;
 function openImage() {
-  document.body.style.backgroundImage = "url(" + fruItsIMGes3[openImag33] + ")";
+  // document.body.style.backgroundImage = "url(" + fruItsIMGes3[openImag33] + ")";
+  document.body.setAttribute('style', "background-Image: url(" + fruItsIMGes3[openImag33]  +")!important;");
   openIMAgesQU3 = fruItsIMGes3.length;
   if (openImag33 >= openIMAgesQU3 - 1) {
     openImag33 = 0;
