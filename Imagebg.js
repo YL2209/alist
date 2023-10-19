@@ -49,8 +49,6 @@ var openImag3 = 0;
 var openIMAgesQU = 0;
 var iMAgesQU = 1;
 function openImageGif() {
-  // SnackbarIMGES('你已切换动态背景：第' + iMAgesQU + '张', 2000);
-  // showMessagePIUS('动态背景：第' + iMAgesQU + '张好看吗', 3000, 15);
   document.body.style.backgroundImage = "url(" + fruItsIMGes[openImag3] + ")";
   openIMAgesQU = fruItsIMGes.length;
   if (openImag3 >= openIMAgesQU - 1) {
@@ -89,8 +87,6 @@ var openImag31 = 0;
 var openIMAgesQU2 = 0;
 var iMAgesQU2 = 1;
 function openImageApi() {
-  // SnackbarIMGES('你已切换简约背景：第' + iMAgesQU2 + '张', 2000);
-  // showMessagePIUS('简约背景：第' + iMAgesQU2 + '张好看吗', 3000, 15);
   document.body.style.backgroundImage = "url(" + fruItsIMGes2[openImag31] + ")";
   openIMAgesQU2 = fruItsIMGes2.length;
   if (openImag31 >= openIMAgesQU2 - 1) {
@@ -132,8 +128,6 @@ var openImag33 = 0;
 var openIMAgesQU3 = 0;
 var iMAgesQU3 = 1;
 function openImage() {
-  // SnackbarIMGES('你已切换动漫背景：第' + iMAgesQU3 + '张', 2000);
-  // showMessagePIUS('动漫背景：第' + iMAgesQU3 + '张好看吗', 3000, 15);
   document.body.style.backgroundImage = "url(" + fruItsIMGes3[openImag33] + ")";
   openIMAgesQU3 = fruItsIMGes3.length;
   if (openImag33 >= openIMAgesQU3 - 1) {
